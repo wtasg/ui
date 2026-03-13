@@ -1,0 +1,137 @@
+## Node.js / Package Managers
+node_modules/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+## TypeScript
+*.tsbuildinfo
+
+## Vite / Build Outputs
+dist/
+dist-ssr/
+src/packages/ui/dist/
+*.out
+*.exe
+
+## Testing (Vitest / Coverage)
+coverage/
+*.lcov
+.nyc_output/
+coverage.txt
+
+## Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+.playwright/
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+**/playwright/.auth/
+
+## Environment
+.env
+.env.*
+!.env.example
+
+## AI Toolkit / Docs Generation
+.changes/*.md
+gen-docs/
+
+## Database
+*.sqlite3
+*.db
+build_db
+
+## Certificates / Keys
+https-keys/
+*.cert
+*.pem
+*.pfx
+*.p12
+*.key
+*.crt
+
+## App Uploads / Images
+server/node-server-app/uploads/
+server/node-server-app/images/
+
+## Lint / Tool Caches
+.eslintcache
+.stylelintcache
+.sqlfluff_cache/
+
+## IDE / Editor (JetBrains + VS Code)
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+## Vim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+## OS Files (macOS / Windows / Linux)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+## CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+cmake-build-*/
+Makefile
+
+## Notes / Knowledge Tools
+**/.obsidian/appearance.json
+**/.obsidian/graph.json
+**/.obsidian/workspace.json
+.logseq/
+
+## Ruby
+.bundle/
+
+## Temporary / Local
+*.tmp
+*.local
+*~
+*.log
+test_output.txt
+storybook-static/
+.storybook/
+plans/
+docs/
+states/
+examples/
+assumptions/
+src/apps/showcase/
+package-lock.json
