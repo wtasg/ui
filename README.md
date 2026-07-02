@@ -2,7 +2,8 @@
 
 A reusable React component library built with TypeScript, Tailwind CSS v4, and Radix UI primitives.
 
-Repository: <https://github.com/wtasg/ui>
++ [repo:gh wtasg/ui](https://github.com/wtasg/ui)
++ [pkg:npm @wtasnorg/ui](https://www.npmjs.com/package/@wtasnorg/ui)
 
 ## Install
 
