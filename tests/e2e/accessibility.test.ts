@@ -10,7 +10,7 @@ test.describe('Accessibility Audits', () => {
   test('Showcase App - Homepage should be accessible', async ({ page }) => {
     // Retry logic for dev server
     await expect(async () => {
-      await page.goto('http://localhost:5173');
+      await page.goto('http://127.0.0.1:5173');
       await expect(page.locator('h1')).toBeVisible();
     }).toPass({ timeout: 15000 });
 
@@ -27,7 +27,7 @@ test.describe('Accessibility Audits', () => {
 
   for (const component of components) {
     test(`Storybook - ${component.name} story should be accessible`, async ({ page }) => {
-      const url = `http://localhost:6006/iframe.html?id=${component.id}&viewMode=story`;
+      const url = `http://127.0.0.1:6006/iframe.html?id=${component.id}&viewMode=story`;
       
       await expect(async () => {
         await page.goto(url);
