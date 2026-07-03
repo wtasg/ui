@@ -58,6 +58,7 @@
     "test:a11y": "playwright test tests/e2e/accessibility.test.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d io",
     "prepublishOnly": "npm run typecheck && npm run test && npm run build"
   },
