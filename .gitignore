@@ -129,9 +129,8 @@ test_output.txt
 storybook-static/
 .storybook/
 plans/
-docs/
 states/
 examples/
 assumptions/
-src/apps/showcase/
+io/
 package-lock.json

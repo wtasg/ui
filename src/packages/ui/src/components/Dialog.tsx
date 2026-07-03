@@ -2,11 +2,29 @@ import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { cn } from "../utils/cn";
 
+/**
+ * Dialog root component that controls the overlay visibility state.
+ */
 const Dialog = DialogPrimitive.Root;
+
+/**
+ * DialogTrigger is the button that opens the dialog.
+ */
 const DialogTrigger = DialogPrimitive.Trigger;
+
+/**
+ * DialogClose is the button that closes the dialog.
+ */
 const DialogClose = DialogPrimitive.Close;
+
+/**
+ * DialogPortal renders the dialog content into a React portal.
+ */
 const DialogPortal = DialogPrimitive.Portal;
 
+/**
+ * DialogOverlay provides a semi-transparent backdrop behind the active dialog content.
+ */
 const DialogOverlay = React.forwardRef<
     React.ComponentRef<typeof DialogPrimitive.Overlay>,
     React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -22,10 +40,13 @@ const DialogOverlay = React.forwardRef<
 ));
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 
+/**
+ * DialogContent represents the main modal container holding title, body, and action buttons.
+ */
 const DialogContent = React.forwardRef<
     React.ComponentRef<typeof DialogPrimitive.Content>,
     React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
->(({ className, children, ...props }, ref) => (
+>((({ className, children, ...props }, ref) => (
     <DialogPortal>
         <DialogOverlay />
         <DialogPrimitive.Content
@@ -59,9 +80,12 @@ const DialogContent = React.forwardRef<
             </DialogPrimitive.Close>
         </DialogPrimitive.Content>
     </DialogPortal>
-));
+)));
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
+/**
+ * DialogHeader represents the top header section of the modal container.
+ */
 const DialogHeader = ({
     className,
     ...props
@@ -73,6 +97,9 @@ const DialogHeader = ({
 );
 DialogHeader.displayName = "DialogHeader";
 
+/**
+ * DialogFooter represents the bottom footer section containing action buttons.
+ */
 const DialogFooter = ({
     className,
     ...props
@@ -84,6 +111,9 @@ const DialogFooter = ({
 );
 DialogFooter.displayName = "DialogFooter";
 
+/**
+ * DialogTitle provides an accessible label and title for the modal screen.
+ */
 const DialogTitle = React.forwardRef<
     React.ComponentRef<typeof DialogPrimitive.Title>,
     React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
@@ -96,6 +126,9 @@ const DialogTitle = React.forwardRef<
 ));
 DialogTitle.displayName = DialogPrimitive.Title.displayName;
 
+/**
+ * DialogDescription provides an accessible helper description for the modal screen content.
+ */
 const DialogDescription = React.forwardRef<
     React.ComponentRef<typeof DialogPrimitive.Description>,
     React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>

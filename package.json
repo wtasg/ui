@@ -45,7 +45,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup --config src/packages/ui/tsup.config.ts",
+    "build": "tsup --config src/packages/ui/tsup.config.ts && npm run build:docs && npm run build:showcase",
+    "build:docs": "node scripts/generate-docs.js",
+    "build:showcase": "vite build src/apps/showcase --config src/apps/showcase/vite.config.ts",
     "dev": "vite serve src/apps/showcase --config src/apps/showcase/vite.config.ts",
     "typecheck": "tsc --noEmit -p src/packages/ui/tsconfig.json",
     "test": "vitest run",

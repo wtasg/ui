@@ -2,8 +2,15 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { cn } from "../utils/cn";
 
+/**
+ * Accordion component for displaying collapsible content panels.
+ * Built on top of Radix UI Accordion Root.
+ */
 const Accordion = AccordionPrimitive.Root;
 
+/**
+ * AccordionItem represents a single collapsible section item in the accordion.
+ */
 const AccordionItem = React.forwardRef<
     React.ComponentRef<typeof AccordionPrimitive.Item>,
     React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
@@ -16,6 +23,9 @@ const AccordionItem = React.forwardRef<
 ));
 AccordionItem.displayName = "AccordionItem";
 
+/**
+ * AccordionTrigger is the header button that toggles the expansion of its associated content panel.
+ */
 const AccordionTrigger = React.forwardRef<
     React.ComponentRef<typeof AccordionPrimitive.Trigger>,
     React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -49,6 +59,9 @@ const AccordionTrigger = React.forwardRef<
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
+/**
+ * AccordionContent contains the expandable/collapsible body text or widgets.
+ */
 const AccordionContent = React.forwardRef<
     React.ComponentRef<typeof AccordionPrimitive.Content>,
     React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>

@@ -23,10 +23,17 @@ const inputVariants = cva(
     }
 );
 
+/**
+ * Props for the Input component.
+ */
 export interface InputProps
     extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
     VariantProps<typeof inputVariants> { }
 
+/**
+ * Input component for text field inputs.
+ * Supports sizes (`sm`, `default`, `lg`) and variants (`default`, `error`).
+ */
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ({ className, variant, inputSize, type, ...props }, ref) => (
         <input

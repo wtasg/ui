@@ -20,6 +20,10 @@ function Spinner() {
     );
 }
 
+/**
+ * Button component for triggering actions or navigating to links.
+ * Supports different shapes, priorities, sizes, icons, and loading states.
+ */
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     (
         {
@@ -119,10 +123,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
+/**
+ * ButtonLink component that acts as a wrapper around Button specifically optimized for links.
+ */
 function ButtonLink({ href, ...props }: ButtonLinkProps) {
     return <Button href={href} {...props} />;
 }
 
+/**
+ * IconButton renders a button enclosing a single icon with a defaults circular shape.
+ */
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
     ({ icon, children, shape = "circle", ariaLabel, ...props }, ref) => {
         return (
@@ -140,6 +150,9 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
 );
 IconButton.displayName = "IconButton";
 
+/**
+ * ButtonGroup groups multiple buttons together in a contiguous flex container.
+ */
 const ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(
     ({ className, children, ...props }, ref) => {
         return (

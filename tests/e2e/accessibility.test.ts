@@ -19,7 +19,7 @@ test.describe('Accessibility Audits', () => {
   });
 
   const components = [
-    { name: 'Button', id: 'primitives-button--default' },
+    { name: 'Button', id: 'primitives-button--primary' },
     { name: 'Accordion', id: 'components-accordion--default' },
     { name: 'Tabs', id: 'components-tabs--default' },
     { name: 'Input', id: 'primitives-input--default' },
